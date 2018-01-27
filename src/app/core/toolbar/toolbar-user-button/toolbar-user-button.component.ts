@@ -1,4 +1,5 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { LayoutDefaultSettings } from '../../layout/layout.settings';
 
 @Component({
   selector: 'vr-toolbar-user-button',
@@ -8,8 +9,11 @@ import { AfterViewInit, Component, OnInit } from '@angular/core';
 export class ToolbarUserButtonComponent implements OnInit, AfterViewInit {
 
   isOpen: boolean;
+  items: ToolbarUserButtonItems[];
 
-  constructor() { }
+  constructor(settings:LayoutDefaultSettings) {
+    this.items = settings.getUserButtonItems();
+   }
 
   ngOnInit() {
   }
@@ -24,4 +28,11 @@ export class ToolbarUserButtonComponent implements OnInit, AfterViewInit {
   onClickOutside() {
     this.isOpen = false;
   }
+}
+
+export interface ToolbarUserButtonItems {
+  title?: string;
+  icon?: string;
+  routerLink?: string;
+  isDivider: boolean
 }

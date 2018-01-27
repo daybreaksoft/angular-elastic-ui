@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { LayoutDefaultSettings, LayoutOptions } from '../../layout/layout.settings';
 
 @Component({
   selector: 'vr-toolbar-gamma',
@@ -12,7 +13,11 @@ export class ToolbarGammaComponent implements OnInit {
   @Output() toggledSidenav = new EventEmitter();
   @Output() toggledQuickpanel = new EventEmitter();
 
-  constructor() { }
+  options: LayoutOptions;
+  
+  constructor(settings: LayoutDefaultSettings) {
+    this.options = settings.getOptions();
+   }
 
   ngOnInit() {}
 
