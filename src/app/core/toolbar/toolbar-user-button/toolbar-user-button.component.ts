@@ -1,5 +1,5 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
-import { LayoutDefaultSettings } from '../../layout/layout.settings';
+import { DefaultLayoutService, ToolbarUserButtonOptions } from '../../layout/layout.settings';
 
 @Component({
   selector: 'vr-toolbar-user-button',
@@ -9,10 +9,10 @@ import { LayoutDefaultSettings } from '../../layout/layout.settings';
 export class ToolbarUserButtonComponent implements OnInit, AfterViewInit {
 
   isOpen: boolean;
-  items: ToolbarUserButtonItems[];
+  options: ToolbarUserButtonOptions;
 
-  constructor(settings:LayoutDefaultSettings) {
-    this.items = settings.getUserButtonItems();
+  constructor(layout:DefaultLayoutService) {
+    this.options = layout.options.toolbarUserButton;
    }
 
   ngOnInit() {
@@ -30,9 +30,3 @@ export class ToolbarUserButtonComponent implements OnInit, AfterViewInit {
   }
 }
 
-export interface ToolbarUserButtonItems {
-  title?: string;
-  icon?: string;
-  routerLink?: string;
-  isDivider: boolean
-}

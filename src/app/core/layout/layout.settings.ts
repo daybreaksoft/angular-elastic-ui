@@ -1,25 +1,55 @@
-
-import { ToolbarUserButtonItems } from '../toolbar/toolbar-user-button/toolbar-user-button.component'
+import { SidenavItem } from '../sidenav/sidenav-item/sidenav-item.model';
 
 export interface LayoutOptions {
-    quickpanelEnabled: boolean;
-    toolbarNatificationsEnabled: boolean;
-    toolbarUserButtonEnalbed: boolean;
-    toolbarSearchEnabled: boolean;
+    logoPath?: LogoPaths;
+    menus?: SidenavItem[];
+    quickpanel: QuickpanelOptions;
+    toolbarUserButton: ToolbarUserButtonOptions;
+    toolbarNotification: ToolbarNotificationOptions;
+    toolbarSearch: ToolbarSearchOptions;
 }
 
-export class LayoutDefaultSettings {
+export interface LogoPaths {
+    toolbarAlpha?: string;
+    toolbarBeta?: string;
+    toolbarGamma?: string;
+    sidenav?: string;
+}
 
-    public getOptions(): LayoutOptions {
+export interface QuickpanelOptions {
+    enabled: boolean;
+}
+
+export interface ToolbarUserButtonItem {
+    name?: string;
+    icon?: string;
+    router?: string;
+    isDivider: boolean
+}
+
+export interface ToolbarUserButtonOptions {
+    enabled: boolean;
+    imagePath?: string;
+    username?: string;
+    buttons?: ToolbarUserButtonItem[];
+}
+
+export interface ToolbarNotificationOptions {
+    enabled: boolean;
+}
+
+export interface ToolbarSearchOptions {
+    enabled: boolean;
+}
+
+export class DefaultLayoutService {
+
+    public get options(): LayoutOptions {
         return {
-            quickpanelEnabled: true,
-            toolbarNatificationsEnabled: true,
-            toolbarUserButtonEnalbed: true,
-            toolbarSearchEnabled: true,
+            quickpanel: { enabled: true },
+            toolbarUserButton: { enabled: true },
+            toolbarNotification: { enabled: true },
+            toolbarSearch: { enabled: true }
         };
-    }
-
-    public getUserButtonItems(): ToolbarUserButtonItems[] {
-        return [];
     }
 }

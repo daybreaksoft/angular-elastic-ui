@@ -14,8 +14,8 @@ import { EffectsModule } from '@ngrx/effects';
 import { AgmCoreModule } from '@agm/core';
 import { RouteHandlerModule } from './core/route-handler/route-handler.module';
 import { HttpClientModule } from '@angular/common/http';
-import {LayoutDefaultSettings} from './core/layout/layout.settings';
-import {AppLayoutSettings} from './app.layout.service';
+import {DefaultLayoutService} from './core/layout/layout.settings';
+import {AppLayoutService} from './app.layout.service';
 
 @NgModule({
   imports: [
@@ -34,7 +34,7 @@ import {AppLayoutSettings} from './app.layout.service';
     RouteHandlerModule
   ],
   providers: [
-    {provide: LayoutDefaultSettings, useClass: AppLayoutSettings }
+    {provide: DefaultLayoutService, useClass: AppLayoutService }
   ],
   declarations: [AppComponent],
   bootstrap: [AppComponent]

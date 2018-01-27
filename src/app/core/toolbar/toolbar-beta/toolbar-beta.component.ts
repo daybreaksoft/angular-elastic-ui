@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { LayoutDefaultSettings, LayoutOptions } from '../../layout/layout.settings';
+import { DefaultLayoutService, LayoutOptions } from '../../layout/layout.settings';
 
 @Component({
   selector: 'vr-toolbar-beta',
@@ -15,8 +15,8 @@ export class ToolbarBetaComponent implements OnInit {
 
   options: LayoutOptions;
   
-  constructor(settings: LayoutDefaultSettings) {
-    this.options = settings.getOptions();
+  constructor(layout: DefaultLayoutService) {
+    this.options = layout.options;
    }
 
   ngOnInit() {}
