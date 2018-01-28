@@ -21,7 +21,6 @@ export class AppLayoutService extends DefaultLayoutService {
       quickpanel: { enabled: true },
       toolbarUserButton: {
         enabled: true,
-        imagePath: '/assets/img/demo/avatars/noavatar.png',
         username: 'David Smith',
         buttons: [
           { name: 'Profile', icon: 'account_circle', router: '/pages/profile', isDivider: false },
