@@ -17,7 +17,7 @@
       <vr-search-bar></vr-search-bar>
     </div>
 
-    <div *ngIf="options.toolbarSearchEnabled" fxLayout="row" fxFlexOffset.gt-sm="24px">
+    <div fxLayout="row" fxFlexOffset.gt-sm="24px">
         <vr-search *ngIf="options.toolbarSearch.enabled" fxShow fxHide.gt-sm></vr-search>
 
         <vr-toolbar-notifications *ngIf="options.toolbarNotification.enabled"></vr-toolbar-notifications>

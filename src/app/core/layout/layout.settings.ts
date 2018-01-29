@@ -1,3 +1,4 @@
+import { Injectable } from '@angular/core';
 import { SidenavItem } from '../sidenav/sidenav-item/sidenav-item.model';
 
 export interface LayoutOptions {
@@ -42,6 +43,7 @@ export interface ToolbarSearchOptions {
     enabled: boolean;
 }
 
+@Injectable()
 export class DefaultLayoutService {
 
     public get options(): LayoutOptions {

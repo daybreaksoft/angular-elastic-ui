@@ -32,7 +32,12 @@ export * from './src/app/core/utils/utils.module';
 
 export * from './src/app/core/core.module';
 export * from './src/app/core/layout/layout.component'
+export * from './src/app/core/layout/layout.settings'
 export * from './src/app/core/route-handler/route-handler.module';
 export * from './src/app/core/page-header/page-header.module';
 export * from './src/app/core/breadcrumbs/breadcrumbs.module';
+export * from './src/app/core/scrollbar/scrollbar.module';
+export * from './src/app/core/scrollbar/scrollbar.component';
+export * from './src/app/core/scrollbar/scrollbar.service';
 export * from './src/app/core/list/list.module';
+export * from './src/app/core/sidenav/sidenav-item/sidenav-item.model'
