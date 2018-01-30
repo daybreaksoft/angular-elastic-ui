@@ -5,16 +5,14 @@ import { reducer } from 'src/app/core/layout/shared/layout.reducer';
  */
 
 export * from './src/app/reducers';
-export * from './src/app/reducers';
-export * from './src/app/reducers';
+export {reducer as layoutReducer} from './src/app/core/layout/shared/layout.reducer';
+export {reducer as sidenavReducer} from './src/app/core/sidenav/shared/sidenav.reducer';
 
 /**
  * animation
  */
 
 export * from './src/app/app.animation';
-export {reducer as layoutReducer} from './src/app/core/layout/shared/layout.reducer';
-export {reducer as sidenavReducer} from './src/app/core/sidenav/shared/sidenav.reducer';
 
 /**
  * utils
@@ -40,4 +38,8 @@ export * from './src/app/core/scrollbar/scrollbar.module';
 export * from './src/app/core/scrollbar/scrollbar.component';
 export * from './src/app/core/scrollbar/scrollbar.service';
 export * from './src/app/core/list/list.module';
+export * from './src/app/core/list/list.interface';
+export * from './src/app/core/list/list-column.model';
+export * from './src/app/core/list/list-datasource';
+export * from './src/app/core/list/list-database';
 export * from './src/app/core/sidenav/sidenav-item/sidenav-item.model'
