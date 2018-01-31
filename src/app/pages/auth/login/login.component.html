@@ -5,18 +5,21 @@
     </div>
     <form #form="ngForm" (ngSubmit)="login()">
       <div class="login-content" fxLayout="column" fxLayoutAlign="start stretch">
-        <mat-form-field>
-          <input matInput placeholder="E-Mail" name="email" required [(ngModel)]="email">
+        <mat-form-field hintLabel="Default username is test">
+          <input matInput placeholder="Username" name="email" required [(ngModel)]="username">
         </mat-form-field>
-        <mat-form-field>
+        <mat-form-field hintLabel="Default password is test">
           <input matInput placeholder="Password" type="password" name="password" required [(ngModel)]="password">
         </mat-form-field>
         <div class="extra-options" fxLayout="row" fxLayoutAlign="space-between center">
           <mat-checkbox class="remember-me">Remember Me</mat-checkbox>
           <a class="forgot-password" [routerLink]="['/auth/forgot-password']">Forgot Password?</a>
         </div>
-        <button color="primary" mat-raised-button [disabled]="!form.valid">SIGN IN</button>
-        <p class="note">Don't have an account?<br/> <a [routerLink]="['/auth/register']">Click here to create one</a></p>
+        <button color="primary" mat-raised-button [disabled]="!form.valid" vr-click-outside>SIGN IN</button>
+        <p class="note">Don't have an account?
+          <br/>
+          <a [routerLink]="['/auth/register']">Click here to create one</a>
+        </p>
       </div>
     </form>
   </div>
