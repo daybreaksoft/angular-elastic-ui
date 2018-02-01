@@ -6,6 +6,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatButtonModule, MatCheckboxModule, MatInputModule } from '@angular/material';
 import { FormsModule } from '@angular/forms';
 
+import { UtilsModule } from '../../../core/utils/utils.module';
+
 @NgModule({
   imports: [
     CommonModule,
@@ -14,7 +16,8 @@ import { FormsModule } from '@angular/forms';
     FlexLayoutModule,
     MatInputModule,
     MatButtonModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    UtilsModule
   ],
   declarations: [LoginComponent]
 })

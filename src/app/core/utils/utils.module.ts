@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ClickOutsideDirective } from './click-outside.directive';
 import { CountUpDirective } from './count-up.directive';
 import { HighlightDirective } from './highlight.directive';
+import { ButtonSubmittingDirective } from './button-submitting.directive';
 
 @NgModule({
   imports: [
@@ -11,12 +12,14 @@ import { HighlightDirective } from './highlight.directive';
   declarations: [
     ClickOutsideDirective,
     CountUpDirective,
-    HighlightDirective
+    HighlightDirective,
+    ButtonSubmittingDirective
   ],
   exports: [
     ClickOutsideDirective,
     CountUpDirective,
-    HighlightDirective
+    HighlightDirective,
+    ButtonSubmittingDirective
   ]
 })
 export class UtilsModule { }

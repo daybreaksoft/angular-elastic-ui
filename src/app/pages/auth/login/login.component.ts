@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 
 import { AuthService } from '../../../services/auth.service';
 import { ROUTE_TRANSITION } from '../../../app.animation';
+import { fadeInContent } from '@angular/material';
 
 @Component({
   selector: 'vr-login',
@@ -26,6 +27,8 @@ export class LoginComponent implements OnInit {
   }
 
   login() {
+
+    this.submitting = true;
     this.authService.login(this.username, this.password).subscribe(
       result => {
         if (result) {
@@ -33,6 +36,10 @@ export class LoginComponent implements OnInit {
         } else {
           console.log('invalid username or password');
         }
+      },
+      null,
+      () => {
+        this.submitting = false;
       }
     );
   }

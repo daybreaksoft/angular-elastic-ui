@@ -15,7 +15,7 @@
           <mat-checkbox class="remember-me">Remember Me</mat-checkbox>
           <a class="forgot-password" [routerLink]="['/auth/forgot-password']">Forgot Password?</a>
         </div>
-        <button color="primary" mat-raised-button [disabled]="!form.valid" vr-click-outside>SIGN IN</button>
+        <button color="primary" mat-raised-button [disabled]="!form.valid" [dbs-button-submitting]="submitting">SIGN IN</button>
         <p class="note">Don't have an account?
           <br/>
           <a [routerLink]="['/auth/register']">Click here to create one</a>
