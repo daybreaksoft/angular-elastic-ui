@@ -16,5 +16,30 @@
       "@angular/material": "@angular/material",
       "@ngrx/store": "@ngrx/store"
     }
-  }
+  },
+  "whitelistedNonPeerDependencies": [
+    "agm",
+    "angular",
+    "ngrx",
+    "nguniversal",
+    "chart",
+    "core-js",
+    "countup",
+    "reselect",
+    "highlight",
+    "lodash",
+    "express",
+    "font-awesome",
+    "hammerjs",
+    "hopscotch",
+    "moment",
+    "normalize",
+    "numeral",
+    "rxjs",
+    "smooth-scrollbar",
+    "sortablejs",
+    "ts-loader",
+    "web-animations-js",
+    "zone.js"
+  ]
 }
