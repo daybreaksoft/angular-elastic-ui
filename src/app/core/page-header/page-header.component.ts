@@ -8,10 +8,11 @@ export class PageHeaderComponent implements OnInit {
 
   @Input() height: string;
   @Input() background: string;
+  @Input() bgColor: string;
   @Input() reverse: boolean;
   @Input() reverseDirection: string[];
 
-  reverseDir: boolean[] = [ ];
+  reverseDir: boolean[] = [];
 
   get margin() {
     return '-' + this.height;

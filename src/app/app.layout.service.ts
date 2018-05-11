@@ -83,6 +83,14 @@ export class AppLayoutService extends DefaultLayoutService {
     // Push the just created Sub Items into the Top Level Item
     dashboard.subItems.push(...dashboardSubItems);
 
+    const crud = new SidenavItem({
+      name: 'CRUD',
+      icon: 'work',
+      route: '/crud/list',
+      subItems: [],
+      position: 1
+    });
+
     const inbox = new SidenavItem({
       name: 'Inbox',
       icon: 'mail',
@@ -345,6 +353,7 @@ export class AppLayoutService extends DefaultLayoutService {
 
     return [
       dashboard,
+      crud,
       inbox,
       chat,
       forms,

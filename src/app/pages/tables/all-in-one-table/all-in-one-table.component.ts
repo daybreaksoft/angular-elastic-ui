@@ -66,6 +66,7 @@ export class AllInOneTableComponent implements List<Customer>, OnInit, OnDestroy
       .takeUntil(componentDestroyed(this))
       .filter(Boolean)
       .subscribe((customers) => {
+        debugger;
         this.customers = customers;
         this.database.dataChange.next(customers);
         this.resultsLength = customers.length;

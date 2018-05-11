@@ -8,7 +8,7 @@ const routes: Routes = [
   {
     path: '',
     component: LayoutComponent,
-    canActivate: [AuthGuard],
+    // canActivate: [AuthGuard],
     children: [
       {
         path: '',
@@ -90,6 +90,10 @@ const routes: Routes = [
       {
         path: 'drag-and-drop',
         loadChildren: 'app/pages/drag-and-drop/drag-and-drop.module#DragAndDropModule'
+      },
+      {
+        path: 'crud',
+        loadChildren: 'app/pages/crud/crud.module#CrudModule'
       }
     ]
   },

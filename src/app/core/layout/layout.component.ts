@@ -12,8 +12,7 @@ import { ScrollbarService } from '../scrollbar/scrollbar.service';
 
 @Component({
   selector: 'vr-layout',
-  templateUrl: './layout.component.html',
-  changeDetection: ChangeDetectionStrategy.OnPush
+  templateUrl: './layout.component.html'
 })
 export class LayoutComponent implements OnInit, OnDestroy {
 

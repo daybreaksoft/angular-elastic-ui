@@ -5,8 +5,8 @@ import { reducer } from 'src/app/core/layout/shared/layout.reducer';
  */
 
 export * from './src/app/reducers';
-export {reducer as layoutReducer} from './src/app/core/layout/shared/layout.reducer';
-export {reducer as sidenavReducer} from './src/app/core/sidenav/shared/sidenav.reducer';
+export { reducer as layoutReducer } from './src/app/core/layout/shared/layout.reducer';
+export { reducer as sidenavReducer } from './src/app/core/sidenav/shared/sidenav.reducer';
 
 /**
  * animation
@@ -43,3 +43,6 @@ export * from './src/app/core/list/list-column.model';
 export * from './src/app/core/list/list-datasource';
 export * from './src/app/core/list/list-database';
 export * from './src/app/core/sidenav/sidenav-item/sidenav-item.model'
+export * from './src/app/core/dialog/dialog.module'
+export * from './src/app/core/page-container/page-container.module'
+export * from './src/app/core/table-container/table-container.module'
